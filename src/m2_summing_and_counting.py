@@ -26,8 +26,8 @@ import math
 
 def main():
     """ Calls the   TEST   functions in this module. """
-    run_test_sum_more_cosines()
-    run_test_count_sines_from()
+    # run_test_sum_more_cosines()
+    # run_test_count_sines_from()
     run_test_count_sines_vs_cosines()
 
 
@@ -71,14 +71,14 @@ def run_test_sum_more_cosines():
     # ------------------------------------------------------------------
 
     # Test 2:
-    expected = 0.020821  # This is APPROXIMATELY the correct answer.
-    answer = sum_more_cosines(-4, 1)
+    expected = -2.038961296  # This is APPROXIMATELY the correct answer.
+    answer = sum_more_cosines(-4, 4)
     print('Test 2 expected:', expected, '(approximately)')
     print('       actual:  ', answer)
 
     # Test 3:
     expected = -0.275648  # This is APPROXIMATELY the correct answer.
-    answer = sum_more_cosines(1, 6)
+    answer = sum_more_cosines(-6, -1)
     print('Test 3 expected:', expected, '(approximately)')
     print('       actual:  ', answer)
 
@@ -103,7 +103,7 @@ def sum_more_cosines(m, n):
     return total
 
     # ------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
+    # DONE: 3. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     #   That is called TEST-DRIVEN DEVELOPMENT (TDD).
     #
@@ -168,7 +168,7 @@ def run_test_count_sines_from():
 
     # Test 6:
     expected = 3
-    answer = count_sines_from(1, 5)
+    answer = count_sines_from(-6, -2)
     print('Test 6 expected:', expected)
     print('       actual:  ', answer)
 
@@ -235,8 +235,8 @@ def run_test_count_sines_vs_cosines():
     # ------------------------------------------------------------------
 
     # Test 2:
-    expected = 100
-    answer = count_sines_vs_cosines(101)
+    expected = 6
+    answer = count_sines_vs_cosines(5)
     print('Test 2 expected:', expected)
     print('       actual:  ', answer)
 
@@ -290,7 +290,7 @@ def count_sines_vs_cosines(m):
       -- Also:  count_sines_vs_cosines(101) returns 100 (trust me!)
     """
     count = 0
-    for k in range(m + 1):
+    for k in range(2*m+1):
         sin = math.sin(k)
         cos = math.cos(k)
         if sin > cos:
