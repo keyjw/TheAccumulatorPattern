@@ -26,8 +26,8 @@ import math
 
 def main():
     """ Calls the   TEST   functions in this module. """
-    # run_test_sum_more_cosines()
-    # run_test_count_sines_from()
+    run_test_sum_more_cosines()
+    run_test_count_sines_from()
     run_test_count_sines_vs_cosines()
 
 
