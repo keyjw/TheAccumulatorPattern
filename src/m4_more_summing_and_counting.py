@@ -31,8 +31,8 @@ import builtins  # Never necessary, but here for pedagogical reasons
 # ----------------------------------------------------------------------
 def main():
     """ Calls the   TEST   functions in this module. """
-    run_test_sum_from()
-    # run_test_factorial()
+    # run_test_sum_from()
+    run_test_factorial()
     # run_test_count_cosines_from()
     # run_test_sum_unit_fractions_from()
 
@@ -195,12 +195,14 @@ def factorial(n):
         factorial(5) returns 5 x 4 x 3 x 2 x 1, that is, 120.
         factorial(0) returns 1 (by definition).
     """
-    total = n
+    total = 1
     for k in range(n):
-        total = total
+        number = (n - k)
+        total = total * number
     return total
+
     # ------------------------------------------------------------------
-    # TODO: 5. Implement and test this function.
+    # DONE: 5. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     #
     # IMPORTANT:  Your solution MUST
